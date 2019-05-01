@@ -6,9 +6,6 @@ This is a sample application for Udacity's Blockchain course.  A decentralized h
 This project is connected to the _Blockchain Developer Nanodegree Program_ course by **Udacity**.
 We are using OpenSea in this project to list the property tokens for sale. In order to list a property, you'll need to go to the item on your account page. On the item detail page, click "Sell". This will walk you through the steps for selling an item. Note that the first time you auction an item, you will need to complete several MetaMask transactions in order to give the exchange contracts access to your items. After you complete these initial steps, creating an auction will only require signing a MetaMask message. This means that you can auction items without paying gas.
 
-The OpenSea User Interface when running should look like...
-![Account Page](images/UX-10.png)
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -74,32 +71,42 @@ Change to the folder ```eth-contracts```
 ```
 truffle test ./test/TestERC721Mintable.js 
 ```
-All 12 tests should pass.
+
 ![TestERC721Mintable.js](images/t1-TestERC721Mintable.png)
+
+All 12 tests should pass.
 
 ```
 truffle test ./test/TestSolnSquareVerifier.js  
 ```
-All 8 tests should pass.
+
 ![TestSolnSquareVerifier.js](images/t2-TestSolnSquareVerifier.png)
+
+All 8 tests should pass.
 
 ```
 truffle test ./test/TestSquareVerifier.js  
 ```
-All 2 tests should pass.
+
 ![TestSquareVerifier.js](images/t3-TestSquareVerifier.png)
+
+All 2 tests should pass.
+
 
 #### Deploying contracts to rinkeby
 ###### Following contracts are deployed to rinkeby for this project:
 * Deploying 'ERC721Mintable'
+```
     contract address:    0xAB24bBaD8829aC75F48ad44ECce36C1b40e6a58F
-    account:             0xC61E4b9E51d9AFe425ac16867B1193B84Af3330b
+```
 * Deploying 'Verifier'
+```
     contract address:    0xA4DeD8b048D6507e90e196A7bA05f9d42125BBB5
-    account:             0xC61E4b9E51d9AFe425ac16867B1193B84Af3330b
+```
 * Deploying 'SolnSquareVerifier'
+```
     contract address:    0x1744B7182BF632b22cf5564F1E2C9bDe761f8eBC
-    account:             0xC61E4b9E51d9AFe425ac16867B1193B84Af3330b
+```
 
 You can even check out the source code for this smart contract by rinkeby etherscan:
   [SolnSquareVerifier](https://rinkeby.etherscan.io/address/0x1744B7182BF632b22cf5564F1E2C9bDe761f8eBC).
@@ -145,13 +152,13 @@ node scripts/mint.js
 ```
 
 #### Submit Contract to the OpenSea Marketplace:
-Now for the exciting part! OpenSea has a Rinkeby environment that allows developers to test their integration with OpenSea. This can be found at rinkeby.opensea.io. By hitting the right URL, we should be able to immediately view one of our items on OpenSea. The URL can be constructed in the following way:
-https://rinkeby.opensea.io/assets/<asset_contract_address>/<token_id>
-Where asset_contract_address is the address of our contract, and token_id is one of the token id's of our items. 
-For example, for the SolnSquareVerifier contract, here's token #1:
-```
-https://rinkeby.opensea.io/assets/0x7B8fC46596e11B1FAECa8d0E73425eCdfef6c572/1
-```
+OpenSea has a Rinkeby environment that allows developers to test their integration with OpenSea. 
+This can be found at rinkeby.opensea.io. 
+
+    https://rinkeby.opensea.io/get-listed/step-two
+
+By using <contract_address> (SolnSquareVerifier), we should be able to use our contract  on OpenSea. 
+
 Your terminal should look something like this:
 ![OpenSea submit marketplace page](images/UX-10.png)
 
