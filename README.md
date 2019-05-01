@@ -129,11 +129,16 @@ truffle migrate --network rinkeby --reset
 ```
  10 tokens are minted
 
-1. Minted token. Transaction: 0x7ce057661ab7cc4f972018ff00d52e0ca07c5224ac85202c1891e3afd5fad70f
-2. Minted token. Transaction: 0xe05cd872e113820d299e9ef329f47726edc2af8f4dd10b78f634e3f7890eb4c0
-3. Minted token. Transaction: 0x0d07d5a1f2191260787c4d1a9b7c7d06299c309da0db3bd6fec67589a77ff9b2
-4. Minted token. Transaction: 0x2b95d7ead1427f34a01c2a566ea1594a77bfd8c64cd2bbd6d31acc26506261b1
-5. Minted token. Transaction: 0x94e3053b5a5da53fae5821b8a4588df5d8b1bfc2ef48ccac7468040dcbbfe34b
+1.  Minted token. Transaction: 0x7ce057661ab7cc4f972018ff00d52e0ca07c5224ac85202c1891e3afd5fad70f
+2.  Minted token. Transaction: 0xe05cd872e113820d299e9ef329f47726edc2af8f4dd10b78f634e3f7890eb4c0
+3.  Minted token. Transaction: 0x0d07d5a1f2191260787c4d1a9b7c7d06299c309da0db3bd6fec67589a77ff9b2
+4.  Minted token. Transaction: 0x2b95d7ead1427f34a01c2a566ea1594a77bfd8c64cd2bbd6d31acc26506261b1
+5.  Minted token. Transaction: 0x94e3053b5a5da53fae5821b8a4588df5d8b1bfc2ef48ccac7468040dcbbfe34b
+6.  Minted token. Transaction: 0xdd2cd9973bc4eca91cf85728bf6c6a159044623a1da5452e6f8438f722ecdd02
+7.  Minted token. Transaction: 0x74f5ea6f6bae9f6081377c6d3d065feb147b077d7791a7cd5765dca10c733ad5
+8.  Minted token. Transaction: 0xf0dbd5aaeebdbe953e5ce8f0080408d3184828ae05330f5cadc9030c8ddd8e27
+9.  Minted token. Transaction: 0xa4f7bb9f1756352233703dc3c0fa17fe4c2f4bd37ba75d44e82efef4b54e9ec1
+10. Minted token. Transaction: 0x2b99a4dc510894167a31fc1a9441caf5ca99d5a57e70592614b758d7a757aa84
 
 ```
 We'll mint these assets into an account that we control so that we can test the OpenSea auction flow for our items.
@@ -151,22 +156,30 @@ export NFT_CONTRACT_ADDRESS="<deployed_contract_address>"
 node scripts/mint.js
 ```
 
-#### Submit Contract to the OpenSea Marketplace:
+#### Generate Storefront on OpenSea marketplace:
 OpenSea has a Rinkeby environment that allows developers to test their integration with OpenSea. 
 This can be found at rinkeby.opensea.io. 
 
     https://rinkeby.opensea.io/get-listed/step-two
 
 By using <contract_address> (SolnSquareVerifier), we should be able to use our contract  on OpenSea. 
+Deployed contract to rinkeby is :  'SolnSquareVerifier'
+```
+    contract address:    0x1744B7182BF632b22cf5564F1E2C9bDe761f8eBC
+```
 
 Your terminal should look something like this:
 ![OpenSea submit marketplace page](images/UX-10.png)
 
-#### Launch the OpenSea:
+#### Test and Verify OpenSea with  SolnSquareVerifier tokens:
 
-Your terminal should look something like this:
+https://rinkeby.opensea.io/category/udacityrealstatetitlev2
 
-![start page](images/UX-20.png)
+* List 5 of your tokens on the marketplace
+* Purchase those 5 tokens using a different address
+
+![Udacity RealState Title V2](images/UX-20.png)
+
 
 ## Built With
 
